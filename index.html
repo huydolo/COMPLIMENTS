@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #complimentText {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get a Compliment!</h1>
+        <button id="complimentButton">Click Me</button>
+        <p id="complimentText"></p>
+    </div>
+
+    <script>
+        
+        
+        
+        
+        const compliments = [
+            "You have a great sense of humor!",
+            "You're an awesome friend.",
+            "You light up the room.",
+            "You're a smart cookie!",
+            "You are amazing just the way you are.",
+            "You bring out the best in others.",
+            "You're a great listener.",
+            "You have impeccable manners.",
+            "You're so thoughtful.",
+            "You're making a difference."
+        ];
+
+        document.getElementById('complimentButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById('complimentText').innerText = compliments[randomIndex];
+        });
+    </script>
+</body>
+</html>
